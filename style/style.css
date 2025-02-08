@@ -1,32 +1,120 @@
-h1
-{
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.navbar ul
-{
-    list-style-type: none;
-    background-color: rgb(0, 98, 21);
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
+body {
+    font-family: "Space Mono", serif;
+    background-color: rgb(0, 0, 0);
 }
 
-.navbar a
-{
+/*
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+    */
+
+.navbar ul {
+    display: flex;
+    justify-content: right;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
-    padding: 15px;
+    padding: 30px;
     display: block;
     text-align: center;
+    transition: color 0.2s ease-in-out;
 }
 
-.navbar a:hover
-{
-    background-color: black;
+.navbar a:hover {
+    color: rgb(199, 177, 144)
 }
 
-.navbar li
-{
-    float: left;
+.name {
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.intro-container {
+    color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.profile-image, .presentation {
+    width: 40vh;
+    height: auto;
+
+    margin: 50px;
+    padding: 25px;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-image:hover, .presentation:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+    background-color: rgb(0, 0, 0);
+}
+
+.profile-image img {
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: 130px;
+    border: 15px solid rgb(26, 26, 26);
+}
+
+.presentation {
+    background-color: rgb(26, 26, 26);
+}
+
+
+.info-container {
+    color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    text-align: justify;
+}
+
+.formation, .experience, .skills {
+    width: 40vh;
+    height: auto;
+
+    margin: 50px;
+    padding: 25px;
+
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.formation:hover, .experience:hover, .skills:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
