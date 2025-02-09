@@ -58,7 +58,6 @@ header h1 {
 }
 
 .profile-image, .presentation {
-    width: 40vh;
     height: auto;
 
     margin: 50px;
@@ -74,6 +73,7 @@ header h1 {
 }
 
 .profile-image {
+    justify-content: center;
     background-color: rgb(0, 0, 0);
 }
 
@@ -101,7 +101,6 @@ header h1 {
 }
 
 .formation, .experience, .skills {
-    width: 40vh;
     height: auto;
 
     margin: 50px;
