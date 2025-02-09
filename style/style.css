@@ -8,14 +8,19 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
-/*
-.navbar {
+header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 0px 5%;
     align-items: center;
-    padding: 0 30px;
 }
-    */
+
+header h1 {
+    color: rgb(247, 247, 247);
+    font-size: 20px;
+    margin-right: auto;
+}
+
 
 .navbar ul {
     display: flex;
@@ -42,12 +47,6 @@ body {
     color: rgb(199, 177, 144)
 }
 
-.name {
-    color: white;
-    font-size: 20px;
-    padding-left: 20px;
-}
-
 .intro-container {
     color: white;
 
@@ -64,7 +63,7 @@ body {
 
     margin: 50px;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -109,7 +108,7 @@ body {
     padding: 25px;
 
     background-color: rgb(26, 26, 26);
-    border-radius: 10px;
+    border-radius: 20px;
 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
