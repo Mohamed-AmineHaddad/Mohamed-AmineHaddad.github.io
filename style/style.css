@@ -22,7 +22,6 @@ header h1 {
     margin-right: auto;
 }
 
-
 .navbar ul {
     display: flex;
     flex-wrap: wrap;
@@ -90,7 +89,6 @@ header h1 {
 .presentation {
     background-color: rgb(26, 26, 26);
 }
-
 
 .info-container {
     color: white;
