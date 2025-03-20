@@ -120,7 +120,7 @@ header h1 {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }                                                               
 
-.formation:hover, .experience:hover, .skills:hover, .projects:hover {
+.presentation:hover, .formation:hover, .experience:hover, .skills:hover, .projects:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
