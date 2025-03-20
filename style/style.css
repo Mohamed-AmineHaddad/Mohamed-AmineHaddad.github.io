@@ -1,3 +1,18 @@
+@media (max-width: 768px) {
+    .formation, .experience, .skills, .projects, .profile-image, .presentation {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .navbar a {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -50,27 +65,11 @@ header h1 {
 
 .intro-container {
     color: white;
-
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-content: flex-start;
     align-items: center;
-}
-/*
-.profile-image, .presentation {
-    height: auto;
-
-    margin: 50px;
-    padding: 25px;
-    border-radius: 20px;
-
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-*/
-.profile-image:hover, .presentation:hover {
-    transform: /*scale(1.05)*/ translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .profile-image {
@@ -83,23 +82,25 @@ header h1 {
 .profile-image img {
     max-width: 100%;
     max-height: 100%;
-
     border-radius: 130px;
     border: 15px solid rgb(26, 26, 26);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .presentation {
     width: 300px;
-
     line-height: 2;
     text-align: justify;
-
     background-color: rgb(26, 26, 26);
 }
 
 .info-container {
     color: white;
-
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -107,25 +108,20 @@ header h1 {
     text-align: justify;
 }
 
-.formation, .experience, .skills, .projects
-, .profile-image, .presentation{
+.formation, .experience, .skills, .projects, .profile-image, .presentation {
     height: auto;
     width: 400px;
-
     margin: 50px;
     padding: 25px;
-
     line-height: 2;
     text-align: justify;
-
     background-color: rgb(26, 26, 26);
     border-radius: 20px;
-
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+}                                                               
 
 .formation:hover, .experience:hover, .skills:hover, .projects:hover {
-    transform: /*scale(1.05)*/ translateY(-8px);
+    transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
