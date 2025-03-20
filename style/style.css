@@ -76,7 +76,6 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0);
 }
 
 .profile-image img {
@@ -115,10 +114,13 @@ header h1 {
     padding: 25px;
     line-height: 2;
     text-align: justify;
-    background-color: rgb(26, 26, 26);
     border-radius: 20px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}                                                               
+}
+
+.formation, .experience, .skills, .projects, .presentation {
+    background-color: rgb(26, 26, 26);
+} 
 
 .presentation:hover, .formation:hover, .experience:hover, .skills:hover, .projects:hover {
     transform: translateY(-8px);
