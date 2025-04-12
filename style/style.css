@@ -1,139 +1,305 @@
-@media (max-width: 768px) {
-    .formation, .experience, .skills, .projects, .profile-image, .presentation {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .navbar a {
-        padding: 15px;
-    }
-
-    header h1 {
-        font-size: 18px;
-    }
-}
-
-html {
-    scroll-behavior: smooth;
-}
+/********************
+        Base
+********************/
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", serif;
 }
 
 body {
-    font-family: "Space Mono", serif;
-    background-color: rgb(0, 0, 0);
-    min-height: 100vh;
+    background-color:rgb(23, 23, 23);
+    color: #ededed;
 }
 
 header {
-
-    display: flex;
-    justify-content: flex-end;
-    padding: 0px 5%;
-    align-items: center;
-}
-
-header h1 {
-    color: rgb(247, 247, 247);
-    font-size: 20px;
-    margin-right: auto;
-}
-
-.navbar ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(23, 23, 23);
+    z-index: 10;
 }
 
-.navbar li {
-    list-style: none;
+.logo {
+    font-family: "Space Mono", monospace;
+    font-size: 54px;
+    font-weight: bold;
+    color: #ededed;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    gap: 50px;
 }
 
 .navbar a {
-    color: white;
+    font-size: 20px;
+    color: #ededed;
     text-decoration: none;
-    padding: 30px;
-    display: block;
-    text-align: center;
-    transition: color 0.2s ease-in-out;
 }
 
 .navbar a:hover {
-    color: rgb(199, 177, 144)
+    color: rgb(0, 234, 125);
 }
 
-.intro-container {
-    color: white;
+/********************
+    Page d'accueil
+********************/
+
+.accueil {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    flex-wrap: wrap-reverse;
     align-items: center;
+    justify-content: space-evenly;
+    padding-top: 85px;
+    width: 100%;
 }
 
-.profile-image {
+.acc-texte, .acc-img {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acc-texte {
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.acc-texte h1 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.acc-texte h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+    color: rgb(0, 234, 125);
+}
+
+.acc-texte p {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.acc-liens {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 50px;
+}
+
+.acc-liens a {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+
+    width: 110px;
+    height: 100%;
+
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 100px;
+    color: #121212;
+    background-color: rgb(0, 234, 125);
 }
 
-.profile-image img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 130px;
-    border: 15px solid rgb(26, 26, 26);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.acc-img {
+    flex-wrap: wrap;
+    width: 550px;
+    padding: 16vh 0;
 }
 
-.profile-image:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.presentation {
+.acc-img img{
     width: 300px;
-    line-height: 2;
-    text-align: justify;
-    background-color: rgb(26, 26, 26);
+    border: 8px solid rgb(50, 50, 50);
+    border-radius: 100px;
 }
 
-.info-container {
-    color: white;
+/********************
+    Page à propos
+********************/
+
+.section-presentation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.presentation-text {
+    width: 80%;
+    padding: 18px;
+    text-align: center;
+    font-size: 20px;
+    border: 8px rgb(50, 50, 50) solid;
+    border-radius: 20px;
+}
+
+.section-presentation h3, .formation-parent-container h3 {
+    padding: 70px;
+    font-size: 30px;
+}
+
+.section-competences h3 {
+    padding: 50px;
+    font-size: 30px;
+}
+
+.section-competences {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.section-competences h4 {
+    padding: 12px;
+    margin-bottom: 70px;
+    font-size: 24px;
+    border: 8px rgb(50, 50, 50)solid;
+    border-radius: 20px;
+}
+
+.competences-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 300px;
+}
+
+
+.languages-container, .software-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.languages-logo, .software-logo {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    align-content: flex-start;
-    text-align: justify;
+    gap: 50px;
+    width: 300px;
 }
 
-.formation, .experience, .skills, .projects, .profile-image, .presentation {
-    height: auto;
-    width: 400px;
-    margin: 50px;
-    padding: 25px;
-    line-height: 2;
-    text-align: justify;
+.software-logo div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 110px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
     border-radius: 20px;
+    color: #121212;
+    background-color: rgb(0, 234, 125);
+}
+
+.languages-logo div{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    padding: 8px;
+    font-size: 50px;
+    border-radius: 20px;
+    color: #121212;
+    background-color: rgb(0, 234, 125);
+}
+
+.languages-logo div, .acc-liens a, .software-logo div{
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.formation, .experience, .skills, .projects, .presentation {
-    background-color: rgb(26, 26, 26);
-} 
-
-.presentation:hover, .formation:hover, .experience:hover, .skills:hover, .projects:hover {
+.languages-logo div:hover, .acc-liens a:hover, .software-logo div:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.section-formation {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.formation-parent-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    max-width: 700px;
+    
+    gap: 50px;
+}
+
+.formation-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: rgb(0, 234, 125);
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+.formation-text-iut, .formation-text-lycee {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: #ededed;
+    background-color: rgb(50, 50, 50) ;
+    z-index: 1;
+}
+
+.formation-date {
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(0, 234, 125);
+}
+
+.formation-name {
+    font-weight: bold;
+}
+
+
+
 footer {
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(50, 50, 50);
     color: white;
     margin-top: 100px;
     padding: 25px 0;
