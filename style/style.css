@@ -61,6 +61,7 @@ header {
     align-items: center;
     justify-content: space-evenly;
     padding-top: 85px;
+    padding-bottom: 50px;
     width: 100%;
 }
 
@@ -323,3 +324,117 @@ footer {
     font-weight: bold;
 }
 
+/********************
+    Mobile
+********************/
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 32px;
+        padding-bottom: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    .accueil {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 100px 20px 50px;
+    }
+
+    .acc-img {
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    .acc-img img {
+        width: 70%;
+    }
+
+    .acc-texte h1 {
+        font-size: 24px;
+    }
+
+    .acc-texte h3 {
+        font-size: 18px;
+    }
+
+    .acc-texte p {
+        font-size: 16px;
+    }
+
+    .acc-liens {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        height: auto;
+        align-items: center;
+    }
+
+    .acc-liens a {
+        width: 70%;
+        font-size: 20px;
+        height: 45px;
+    }
+
+    .presentation-text {
+        width: 95%;
+        font-size: 16px;
+    }
+
+    .section-presentation h3,
+    .formation-parent-container h3,
+    .section-competences h3 {
+        padding: 30px;
+        font-size: 24px;
+    }
+
+    .section-competences h4 {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+    .competences-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .languages-logo,
+    .software-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .formation-container::before {
+        left: 10px;
+        transform: none;
+    }
+
+    .formation-text-iut,
+    .formation-text-lycee {
+        font-size: 16px;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    footer {
+        font-size: 15px;
+        padding: 20px 10px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
