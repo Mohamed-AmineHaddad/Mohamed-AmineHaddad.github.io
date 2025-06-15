@@ -1,7 +1,6 @@
 /********************
         Base
 ********************/
-
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +9,14 @@
 }
 
 body {
-    background-color:rgb(23, 23, 23);
+    background-color: rgb(23, 23, 23);
     color: #ededed;
 }
 
+
+/********************
+        Header
+********************/
 header {
     display: flex;
     flex-wrap: wrap;
@@ -51,10 +54,10 @@ header {
     color: rgb(0, 234, 125);
 }
 
+
 /********************
     Page d'accueil
 ********************/
-
 .accueil {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -65,7 +68,8 @@ header {
     width: 100%;
 }
 
-.acc-texte, .acc-img {
+.acc-texte,
+.acc-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,7 +79,6 @@ header {
     flex-direction: column;
     text-align: center;
 }
-
 
 .acc-texte h1 {
     font-size: 32px;
@@ -104,10 +107,8 @@ header {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
     width: 110px;
     height: 100%;
-
     text-decoration: none;
     font-size: 40px;
     font-weight: bold;
@@ -122,16 +123,16 @@ header {
     padding: 16vh 0;
 }
 
-.acc-img img{
+.acc-img img {
     width: 300px;
     border: 8px solid rgb(50, 50, 50);
     border-radius: 100px;
 }
 
-/********************
-    Page à propos
-********************/
 
+/********************
+     Page À propos
+********************/
 .section-presentation {
     display: flex;
     flex-wrap: wrap;
@@ -140,6 +141,12 @@ header {
     justify-content: center;
     width: 100%;
     padding-top: 100px;
+}
+
+.section-presentation h3,
+.formation-parent-container h3 {
+    padding: 70px;
+    font-size: 30px;
 }
 
 .presentation-text {
@@ -151,91 +158,7 @@ header {
     border-radius: 20px;
 }
 
-.section-presentation h3, .formation-parent-container h3 {
-    padding: 70px;
-    font-size: 30px;
-}
-
-.section-competences h3 {
-    padding: 50px;
-    font-size: 30px;
-}
-
-.section-competences {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.section-competences h4 {
-    padding: 12px;
-    margin-bottom: 70px;
-    font-size: 24px;
-    border: 8px rgb(50, 50, 50)solid;
-    border-radius: 20px;
-}
-
-.competences-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 300px;
-}
-
-
-.languages-container, .software-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.languages-logo, .software-logo {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 50px;
-    width: 300px;
-}
-
-.software-logo div {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 110px;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 20px;
-    color: #121212;
-    background-color: rgb(0, 234, 125);
-}
-
-.languages-logo div{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 110px;
-    padding: 8px;
-    font-size: 50px;
-    border-radius: 20px;
-    color: #121212;
-    background-color: rgb(0, 234, 125);
-}
-
-.languages-logo div, .acc-liens a, .software-logo div{
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.languages-logo div:hover, .acc-liens a:hover, .software-logo div:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
+/* Formation */
 .section-formation {
     display: flex;
     justify-content: space-evenly;
@@ -256,10 +179,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     position: relative;
     max-width: 700px;
-    
     gap: 50px;
 }
 
@@ -273,9 +194,10 @@ header {
     background: rgb(0, 234, 125);
     transform: translateX(-50%);
     z-index: 0;
-  }
+}
 
-.formation-text-iut, .formation-text-lycee {
+.formation-text-iut,
+.formation-text-lycee {
     position: relative;
     width: 100%;
     text-align: center;
@@ -283,7 +205,7 @@ header {
     font-size: 20px;
     border-radius: 20px;
     color: #ededed;
-    background-color: rgb(50, 50, 50) ;
+    background-color: rgb(50, 50, 50);
     z-index: 1;
 }
 
@@ -297,8 +219,95 @@ header {
     font-weight: bold;
 }
 
+/* Compétences */
+.section-competences {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.section-competences h3 {
+    padding: 50px;
+    font-size: 30px;
+}
+
+.section-competences h4 {
+    padding: 12px;
+    margin-bottom: 70px;
+    font-size: 24px;
+    border: 8px rgb(50, 50, 50) solid;
+    border-radius: 20px;
+}
+
+.competences-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 300px;
+}
+
+.languages-container,
+.software-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.languages-logo,
+.software-logo {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 300px;
+}
+
+.languages-logo div,
+.acc-liens a,
+.software-logo div {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.languages-logo div:hover,
+.acc-liens a:hover,
+.software-logo div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.languages-logo div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    padding: 8px;
+    font-size: 50px;
+    border-radius: 20px;
+    color: #121212;
+    background-color: rgb(0, 234, 125);
+}
+
+.software-logo div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 110px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    color: #121212;
+    background-color: rgb(0, 234, 125);
+}
 
 
+/********************
+        Footer
+********************/
 footer {
     background-color: rgb(50, 50, 50);
     color: white;
@@ -322,119 +331,4 @@ footer {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-}
-
-/********************
-    Mobile
-********************/
-
-@media screen and (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .logo {
-        font-size: 32px;
-        padding-bottom: 10px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding-bottom: 10px;
-    }
-
-    .accueil {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 100px 20px 50px;
-    }
-
-    .acc-img {
-        width: 100%;
-        padding: 30px 0;
-    }
-
-    .acc-img img {
-        width: 70%;
-    }
-
-    .acc-texte h1 {
-        font-size: 24px;
-    }
-
-    .acc-texte h3 {
-        font-size: 18px;
-    }
-
-    .acc-texte p {
-        font-size: 16px;
-    }
-
-    .acc-liens {
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-        height: auto;
-        align-items: center;
-    }
-
-    .acc-liens a {
-        width: 70%;
-        font-size: 20px;
-        height: 45px;
-    }
-
-    .presentation-text {
-        width: 95%;
-        font-size: 16px;
-    }
-
-    .section-presentation h3,
-    .formation-parent-container h3,
-    .section-competences h3 {
-        padding: 30px;
-        font-size: 24px;
-    }
-
-    .section-competences h4 {
-        margin-bottom: 40px;
-        font-size: 20px;
-    }
-
-    .competences-container {
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .languages-logo,
-    .software-logo {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .formation-container::before {
-        left: 10px;
-        transform: none;
-    }
-
-    .formation-text-iut,
-    .formation-text-lycee {
-        font-size: 16px;
-        text-align: left;
-        padding-left: 30px;
-    }
-
-    footer {
-        font-size: 15px;
-        padding: 20px 10px;
-    }
-
-    .links {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
 }
