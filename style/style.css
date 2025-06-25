@@ -1,128 +1,6 @@
 /********************
-    Responsive Mobile
+  La base des bases
 ********************/
-@media screen and (max-width: 768px) {
-
-    /***** Header *****/
-    header {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .logo {
-        font-size: 32px;
-        padding-bottom: 10px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding-bottom: 10px;
-    }
-
-    /***** Accueil *****/
-    .accueil {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 100px 20px 50px;
-    }
-
-    .acc-img {
-        width: 100%;
-        padding: 30px 0;
-    }
-
-    .acc-img img {
-        width: 70%;
-    }
-
-    .acc-texte h1 {
-        font-size: 24px;
-    }
-
-    .acc-texte h3 {
-        font-size: 18px;
-    }
-
-    .acc-texte p {
-        font-size: 16px;
-    }
-
-    .acc-liens {
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-        height: auto;
-        align-items: center;
-    }
-
-    .acc-liens a {
-        width: 70%;
-        font-size: 20px;
-        height: 45px;
-    }
-
-    /***** Présentation *****/
-    .presentation-text {
-        width: 95%;
-        font-size: 16px;
-    }
-
-    .section-presentation h3,
-    .formation-parent-container h3,
-    .section-competences h3 {
-        padding: 30px;
-        font-size: 24px;
-    }
-
-    /***** Compétences *****/
-    .section-competences h4 {
-        margin-bottom: 40px;
-        font-size: 20px;
-    }
-
-    .competences-container {
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .languages-logo,
-    .software-logo {
-        width: 100%;
-        justify-content: center;
-    }
-
-    /***** Formation *****/
-    .formation-container::before {
-        left: 10px;
-        transform: none;
-    }
-
-    .formation-text-iut,
-    .formation-text-lycee {
-        font-size: 16px;
-        text-align: left;
-        padding-left: 30px;
-    }
-
-    /***** Footer *****/
-    footer {
-        font-size: 15px;
-        padding: 20px 10px;
-    }
-
-    .links {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-
-/********************
-        Base
-********************/
-
 * {
     margin: 0;
     padding: 0;
@@ -131,8 +9,9 @@
 }
 
 body {
-    background-color:rgb(23, 23, 23);
+    background-color: rgb(23, 23, 23);
     color: #ededed;
+    overflow-x: hidden;
 }
 
 header {
@@ -175,7 +54,6 @@ header {
 /********************
     Page d'accueil
 ********************/
-
 .accueil {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -186,7 +64,8 @@ header {
     width: 100%;
 }
 
-.acc-texte, .acc-img {
+.acc-texte,
+.acc-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,7 +75,6 @@ header {
     flex-direction: column;
     text-align: center;
 }
-
 
 .acc-texte h1 {
     font-size: 32px;
@@ -225,10 +103,8 @@ header {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
     width: 110px;
     height: 100%;
-
     text-decoration: none;
     font-size: 40px;
     font-weight: bold;
@@ -243,7 +119,7 @@ header {
     padding: 16vh 0;
 }
 
-.acc-img img{
+.acc-img img {
     width: 300px;
     border: 8px solid rgb(50, 50, 50);
     border-radius: 100px;
@@ -252,7 +128,6 @@ header {
 /********************
     Page à propos
 ********************/
-
 .section-presentation {
     display: flex;
     flex-wrap: wrap;
@@ -272,7 +147,8 @@ header {
     border-radius: 20px;
 }
 
-.section-presentation h3, .formation-parent-container h3 {
+.section-presentation h3,
+.formation-parent-container h3 {
     padding: 70px;
     font-size: 30px;
 }
@@ -295,7 +171,7 @@ header {
     padding: 12px;
     margin-bottom: 70px;
     font-size: 24px;
-    border: 8px rgb(50, 50, 50)solid;
+    border: 8px rgb(50, 50, 50) solid;
     border-radius: 20px;
 }
 
@@ -306,15 +182,15 @@ header {
     gap: 300px;
 }
 
-
-.languages-container, .software-container {
+.languages-container,
+.software-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-.languages-logo, .software-logo {
+.languages-logo,
+.software-logo {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -336,7 +212,7 @@ header {
     background-color: rgb(0, 234, 125);
 }
 
-.languages-logo div{
+.languages-logo div {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -348,11 +224,15 @@ header {
     background-color: rgb(0, 234, 125);
 }
 
-.languages-logo div, .acc-liens a, .software-logo div{
+.languages-logo div,
+.acc-liens a,
+.software-logo div {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.languages-logo div:hover, .acc-liens a:hover, .software-logo div:hover {
+.languages-logo div:hover,
+.acc-liens a:hover,
+.software-logo div:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -377,10 +257,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     position: relative;
     max-width: 700px;
-    
     gap: 50px;
 }
 
@@ -388,15 +266,16 @@ header {
     content: '';
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 40px;
     left: 50%;
     width: 3px;
     background: rgb(0, 234, 125);
     transform: translateX(-50%);
     z-index: 0;
-  }
+}
 
-.formation-text-iut, .formation-text-lycee {
+.formation-text-iut,
+.formation-text-lycee {
     position: relative;
     width: 100%;
     text-align: center;
@@ -404,25 +283,25 @@ header {
     font-size: 20px;
     border-radius: 20px;
     color: #ededed;
-    background-color: rgb(50, 50, 50) ;
+    background-color: rgb(50, 50, 50);
     z-index: 1;
 }
 
 .formation-date {
     font-style: italic;
     font-weight: bold;
-    color: rgb(0, 234, 125);
 }
 
 .formation-name {
     font-weight: bold;
 }
 
-
-
+/********************
+    Footer
+********************/
 footer {
     background-color: rgb(50, 50, 50);
-    color: white;
+    color: #ffffff;
     margin-top: 100px;
     padding: 25px 0;
     text-align: center;
@@ -434,66 +313,63 @@ footer {
     margin: auto;
 }
 
-.links {
-    margin-top: 30px;
-}
-
 .links a {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
 }
 
 /********************
-    Mobile
+    Responsive Mobile
 ********************/
-
 @media screen and (max-width: 768px) {
-
+    /* Header */
     header {
         flex-direction: column;
         padding: 10px 0;
     }
-
     .logo {
         font-size: 32px;
         padding-bottom: 10px;
     }
-
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
-        padding-bottom: 10px;
     }
 
+    /* Accueil */
     .accueil {
         flex-direction: column-reverse;
         align-items: center;
-        padding: 100px 20px 50px;
+        justify-content: center;
+        padding: 100px 10px 50px;
     }
-
+    .acc-texte,
     .acc-img {
         width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .acc-img {
         padding: 30px 0;
     }
-
     .acc-img img {
         width: 70%;
+        display: block;
+        margin: 0 auto;
     }
-
     .acc-texte h1 {
         font-size: 24px;
     }
-
     .acc-texte h3 {
         font-size: 18px;
     }
-
     .acc-texte p {
         font-size: 16px;
     }
-
     .acc-liens {
         flex-direction: column;
         width: 100%;
@@ -501,18 +377,17 @@ footer {
         height: auto;
         align-items: center;
     }
-
     .acc-liens a {
         width: 70%;
         font-size: 20px;
         height: 45px;
     }
 
+    /* Présentation */
     .presentation-text {
         width: 95%;
         font-size: 16px;
     }
-
     .section-presentation h3,
     .formation-parent-container h3,
     .section-competences h3 {
@@ -520,39 +395,43 @@ footer {
         font-size: 24px;
     }
 
+    /* Compétences */
     .section-competences h4 {
         margin-bottom: 40px;
         font-size: 20px;
     }
-
     .competences-container {
         flex-direction: column;
         gap: 50px;
     }
-
     .languages-logo,
     .software-logo {
         width: 100%;
         justify-content: center;
     }
 
-    .formation-container::before {
-        left: 10px;
-        transform: none;
+    /* Formation */
+    .formation-container {
+        width: 90%;
+        margin: 0 auto;
     }
-
+    .formation-container::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .formation-text-iut,
     .formation-text-lycee {
-        font-size: 16px;
-        text-align: left;
-        padding-left: 30px;
+        width: 100%;
+        margin: 0 auto 40px;
+        padding: 0;
+        text-align: center;
     }
 
+    /* Footer */
     footer {
         font-size: 15px;
         padding: 20px 10px;
     }
-
     .links {
         display: flex;
         flex-direction: column;
